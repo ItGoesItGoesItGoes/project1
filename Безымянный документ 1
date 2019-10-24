@@ -1,0 +1,12 @@
+
+lgi = require 'lgi' -- подключение модуля lgi
+
+gtk = lgi.Gtk
+gtk.init() -- инициализация библиотеки gtk
+
+bld = gtk.Builder() -- создание нового экземпляра построителя интерфесов
+bld:add_from_file('lab.glade') -- загрузка описания интерфейса
+
+ui = bld.objects
+
+ui.wnd.title = 'lab-01' -- зада
